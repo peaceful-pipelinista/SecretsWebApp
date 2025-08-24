@@ -1,0 +1,43 @@
+<h2 class="text-center mb-4"><i class="fas fa-user-plus"></i> Register</h2>
+
+<% if (typeof message !== "undefined") { %>
+<div class="alert alert-danger text-center"><%= message %></div>
+<% } %>
+
+<form action="/register" method="POST" class="mx-auto" style="max-width: 400px">
+  <div class="mb-3">
+    <label>Name</label>
+    <input type="text" name="name" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label>Email</label>
+    <input type="text" name="username" class="form-control" required />
+  </div>
+
+  <div class="mb-3">
+    <label>Password</label>
+    <input
+      type="password"
+      id="password"
+      name="password"
+      class="form-control"
+      required
+    />
+    <input type="checkbox" id="showPassword" class="mt-2" /> Show Password
+  </div>
+
+  <button type="submit" class="btn btn-success w-100">Register</button>
+</form>
+
+<p class="text-center mt-3">
+  Already have an account? <a href="/login">Login here</a> 🌸
+</p>
+
+<script>
+  const pwInput = document.getElementById("password");
+  const showPw = document.getElementById("showPassword");
+  showPw.addEventListener("change", () => {
+    pwInput.type = showPw.checked ? "text" : "password";
+  });
+</script>
