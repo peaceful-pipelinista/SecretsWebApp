@@ -10,6 +10,7 @@ A secure web application to register, login, and manage secrets. Built with **No
 
 ## **Live Demo**
 
+[🔗 View Live on Render](https://secretswebapp-186h.onrender.com)  
 
 
 ---
