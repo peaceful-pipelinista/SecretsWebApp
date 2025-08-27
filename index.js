@@ -143,5 +143,5 @@ app.get("/logout", (req, res) => {
 app.get("/login", (req, res) => res.render("login"));
 app.get("/register", (req, res) => res.render("register"));
 
-// Start server
+
 app.listen(5000, () => console.log("Server started on port 5000"));
